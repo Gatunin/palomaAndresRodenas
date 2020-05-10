@@ -1,0 +1,86 @@
+@import "~bootstrap/scss/bootstrap";
+@import "_variable.scss";
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: $colorFondo;
+}
+
+a {
+    color: $colorTitulo;
+    transition: all 0.5s ease-in-out;
+}
+
+.dropdown {
+    .dropdown-menu {
+        transition: all 0.5s;
+        overflow: hidden;
+        transform-origin: top center;
+        transform: scale(1, 0);
+        display: inline-block;
+    }
+    &:hover {
+        .dropdown-menu {
+            transform: scale(1);
+        }
+    }
+}
+
+.dropdown.open .dropdown-menu {
+    /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+    max-height: 300px;
+    opacity: 1;
+}
+
+.submenu {
+    background-color: transparent;
+    border: none;
+}
+
+@media (min-width: 576px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+
+    .menu {
+        justify-content: flex-end;
+        margin-top: 1em;
+        margin-right: 1em;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+    
+    .menu {
+        justify-content: flex-end;
+        margin-top: 1em;
+        margin-right: 1em;
+    }
+}
